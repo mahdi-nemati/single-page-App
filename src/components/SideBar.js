@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const SideBar = () => {
   return (
     <div className="linkCon">
-      <Link to="/profile/dashboard">dashboard</Link>
-      <Link to="/profile/download">download</Link>
+      <NavLink
+        className={(a) => (a.isActive ? "activeStyle none" : "none")}
+        to="/profile/dashboard"
+      >
+        dashboard
+      </NavLink>
+      <NavLink
+        className={(a) => (a.isActive ? "activeStyle none" : "none")}
+        to="/profile/download"
+      >
+        download
+      </NavLink>
     </div>
   );
 };

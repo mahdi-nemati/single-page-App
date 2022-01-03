@@ -9,8 +9,19 @@ const Blog = (props) => {
   const id = NumberId.id;
   return (
     <Layout>
-      <p>this is a blog - {id}</p>
-      <Link to={`/blogs/${parseInt(id) + 1}`}>go to next blog</Link>
+      <section className="homePage">
+        <header className="homePageHeader">
+          <p>بلاگ شماره ی - {id}</p>
+        </header>
+        <body className="blogPageBody">
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط
+          </p>
+        </body>
+        <Link to={`/blogs/${parseInt(id) + 1}`}>بلاگ بعدی</Link>
+      </section>
     </Layout>
   );
 };

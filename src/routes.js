@@ -8,13 +8,13 @@ import Profile from "./Pages/Profile";
 
 const routes = [
   { path: "/", element: <HomePage /> },
-  { path: "/about-us", element: <AboutPage /> },
-  { path: "/profile//*", element: <Profile /> },
+  { path: "/profile/*", element: <Profile /> },
+  { path: "/post", element: <PostPage /> },
+  { path: "/post/:id([0-9]+)", element: <PostPage /> },
   { path: "/blogs", element: <BlogPage /> },
   { path: "/blogs/:id", element: <Blog /> },
   { path: "/*", element: <NotFound /> },
-  { path: "/post", element: <PostPage /> },
-  { path: "/post/:id([0-9]+)", element: <PostPage /> },
+  { path: "/about-us", element: <AboutPage /> },
 ];
 
 export default routes;

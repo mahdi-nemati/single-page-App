@@ -1,19 +1,34 @@
 import { NavLink } from "react-router-dom";
-const Navigation = (props) => {
+import MenuIcon from "./components/MenuIcon";
+import { useState } from "react";
+const Navigation = () => {
+  const [click, setClick] = useState(true);
   const items = [
-    { to: "/", name: "HomePage" },
-    { to: "/about-us", name: "AboutPag" },
-    { to: "/profile", name: "Profile" },
-    { to: "/blogs", name: "Blogs" },
-    { to: "/post", name: "Post" },
+    { to: "/", name: "خانه" },
+    { to: "/about-us", name: "درباره ما" },
+    { to: "/profile", name: "نمایه" },
+    { to: "/blogs", name: "بلاگ ها" },
+    { to: "/post", name: "پست ها" },
   ];
+  const MenuHandler = () => {
+    setClick(!click);
+  };
   return (
     <header>
       <nav>
-        <ul className="nav">
+        <section className={click ? "menuCon openMenu" : " menuCon closeMenu"}>
+          <MenuIcon MenuHandler={MenuHandler} />
+        </section>
+        <ul className={click ? "nav open" : "nav close"}>
+          <div></div>
           {items.map((i) => (
             <li key={i.to}>
-              <NavLink to={i.to}>{i.name}</NavLink>
+              <NavLink
+                className={(a) => (a.isActive ? "activeStyle  none" : "none")}
+                to={i.to}
+              >
+                {i.name}
+              </NavLink>
             </li>
           ))}
         </ul>

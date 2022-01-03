@@ -3,11 +3,17 @@ import { useParams } from "react-router-dom";
 
 const PostPage = () => {
   const NumberId = useParams();
-  const id = NumberId.id || 1;
+  const id = NumberId.id;
   return (
     <Layout>
-      <p>Post - {id}</p>
-      <div>{JSON.stringify(NumberId)}</div>
+      <section className="homePage">
+        <header className="homePageHeader">
+          <h3> پست ها</h3>
+        </header>
+        <body >
+          <p>هیچ پستی وجود ندارد</p>
+        </body>
+      </section>
     </Layout>
   );
 };

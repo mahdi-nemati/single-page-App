@@ -4,20 +4,31 @@ const items = [
   { to: "/blogs/1", name: "blog -1" },
   { to: "/blogs/2", name: "blog -2" },
   { to: "/blogs/3", name: "blog -3" },
-  { to: "/blogs/4", name: "Blog -4" },
+  { to: "/blogs/4", name: "blog -4" },
 ];
 
 const BlogPage = () => {
   return (
     <Layout>
-      <p>این صفحه بلاگ ها است</p>
-      {items.map((i) => (
-        <li key={i.to}>
-          <Link className="none" to={{pathname:i.to , search:"sort=name"}}>
-            {i.name}
-          </Link>
-        </li>
-      ))}
+      <section className="homePage">
+        <header className="homePageHeader">
+          <h3> بلاگ ها </h3>
+        </header>
+        <body>
+          <ul>
+            {items.map((i) => (
+              <li key={i.to} className="blogList">
+                <Link
+                  className="none blogItem"
+                  to={{ pathname: i.to, search: "sort=name" }}
+                >
+                  {i.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </body>
+      </section>
     </Layout>
   );
 };

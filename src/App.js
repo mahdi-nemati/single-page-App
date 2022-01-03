@@ -1,4 +1,5 @@
 import "./App.css";
+import "animate.css";
 import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";

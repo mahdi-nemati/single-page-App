@@ -1,7 +1,8 @@
 const Footer = () => {
   return (
     <footer>
-      <h4>this is a footer </h4>
+      <h4>Single Page Aplication</h4>
+      <h6>this.nemati@gmail.com</h6>
     </footer>
   );
 };
