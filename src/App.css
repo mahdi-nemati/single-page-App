@@ -203,14 +203,22 @@ footer {
   animation: pulse;
   animation-duration: 1s;
 }
+.notBody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
 @media screen and (min-width: 1024px) {
-  
   .nav {
     min-height: 550px;
     max-height: 1000px;
     font-size: 1.8rem;
   }
-  .homePage , footer , .childCon {
+  .homePage , footer , .childCon .notBody{
     font-size: 1.8rem;
   }
 }
+
+
